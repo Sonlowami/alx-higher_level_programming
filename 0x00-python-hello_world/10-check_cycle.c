@@ -7,28 +7,19 @@
  */
 int check_cycle(listint_t *list)
 {
-	int i, j;
-	listint_t *node_a, *node_b, **used;
+	listint_t *node_a, *node_b;
 
-	used = malloc(sizeof(list) * 64);
-	if (!used)
-		exit(-1);
-	node_a = list, i = 0;
-	while (node_a)
+	node_a = list, node_b = list->next;
+	while (node_a && node_b)
 	{
-		used[i] = node_a;
-		node_b = node_a->next;
-		for (j = 0; used[j]; j++)
-		{
-			if (node_b == used[j])
-			{
-				free(used);
-				return (1);
-			}
-		}
-		node_a = node_b;
+		if (node_a == node_b)
+			return (1);
+		/*if node_b is twice faster, it will catch node_a in the cycle*/
+		node_a = node_a->next;
+		if (!node_b->next)
+			break;
+		node_b = node_b->next->next;
 	}
-	free(used);
 	return (0);
 }
 
