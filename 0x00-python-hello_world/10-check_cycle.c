@@ -10,14 +10,12 @@ int check_cycle(listint_t *list)
 	listint_t *node_a, *node_b;
 
 	node_a = list, node_b = list->next;
-	while (node_a && node_b)
+	while (node_a && node_b && node_b->next)
 	{
 		if (node_a == node_b)
 			return (1);
 		/*if node_b is twice faster, it will catch node_a in the cycle*/
 		node_a = node_a->next;
-		if (!node_b->next)
-			break;
 		node_b = node_b->next->next;
 	}
 	return (0);
