@@ -9,6 +9,8 @@ int check_cycle(listint_t *list)
 {
 	listint_t *node_a, *node_b;
 
+	if (!list)
+		return (0);
 	node_a = list, node_b = list->next;
 	while (node_a && node_b && node_b->next)
 	{
