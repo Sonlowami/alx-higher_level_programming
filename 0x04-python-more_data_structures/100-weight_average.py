@@ -7,3 +7,4 @@ def weight_average(my_list=[]):
                 sm += tp[0] * tp[1]
                 weight += tp[1]
         return sm / weight
+    return 0
