@@ -9,7 +9,7 @@ def roman_to_int(roman_string):
     new, first = '', ''
     count = i = 0
     is_before = False
-    if type(roman_string) is str or roman_string is not None:
+    if type(roman_string) is str and roman_string is not None:
         while i < len(roman_string):
             first = roman_string[i]
             count += 1
