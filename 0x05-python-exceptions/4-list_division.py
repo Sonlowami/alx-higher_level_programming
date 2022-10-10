@@ -10,9 +10,9 @@ def list_division(my_list_1, my_list_2, list_length):
             res = 0
         except ZeroDivisionError:
             print("division by 0")
-            res =  0
+            res = 0
         except IndexError:
-            print ("out of range")
+            print("out of range")
             res = 0
         finally:
             i += 1
