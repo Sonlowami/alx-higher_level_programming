@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" Create a class that raise errors"""
+
+
 class Square:
     """Define a square"""
     def __init__(self, size=0):

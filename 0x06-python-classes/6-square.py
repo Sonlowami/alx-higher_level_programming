@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Create a class of complex square"""
+
+
 class Square:
     """Define a square"""
     def __init__(self, size=0, position=(0, 0)):
