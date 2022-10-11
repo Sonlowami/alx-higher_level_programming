@@ -2,7 +2,7 @@
 class Square:
     """Define a square"""
     def __init__(self, size=0, position=(0, 0)):
-        
+
         """Initialize the size of the square, raises TypeError
         if size is not an int
         Args:
@@ -15,8 +15,7 @@ class Square:
         Return: the area of the square"""
 
         return self.__size**2
-    
-   
+
     @property
     def position(self):
         """Return the tuple whose value is in protected value position"""
@@ -39,7 +38,6 @@ class Square:
         if value[0] < 0 or value[1] < 0:
             raise TypeError('position must be a tuple of 2 positive integers')
             self.__position = value
-
 
     @property
     def size(self):
@@ -75,5 +73,3 @@ class Square:
 
         if self.__size == 0:
             print("")
-
-

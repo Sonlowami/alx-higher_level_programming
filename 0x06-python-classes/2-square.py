@@ -2,7 +2,7 @@
 class Square:
     """Define a square"""
     def __init__(self, size=0):
-        
+
         """Initialize the size of the square, raises TypeError
         if size is not an int
         Args:

@@ -2,7 +2,7 @@
 class Square:
     """Define a square"""
     def __init__(self, size=0):
-        
+
         """Initialize the size of the square, raises TypeError
         if size is not an int
         Args:
@@ -14,7 +14,7 @@ class Square:
         Return: the area of the square"""
 
         return self.__size**2
-    
+
     @property
     def size(self):
         """Return the value stored in variable size"""
@@ -44,4 +44,3 @@ class Square:
             i += 1
         if self.__size == 0:
             print("")
-        
