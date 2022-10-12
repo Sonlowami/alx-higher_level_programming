@@ -75,7 +75,6 @@ class Square:
                 j += 1
             print("")
             i += 1
-        print("")
 
         if self.__size == 0:
             print("")
