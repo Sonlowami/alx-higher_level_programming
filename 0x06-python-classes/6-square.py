@@ -66,7 +66,6 @@ class Square:
         while i < self.size:
             j, x = 0, 0
             if self.position[1] <= 0:
-                print("")
                 while x < self.position[0]:
                     print(" ", end="")
                     x += 1
@@ -76,6 +75,7 @@ class Square:
                 j += 1
             print("")
             i += 1
+        print("")
 
         if self.__size == 0:
             print("")
