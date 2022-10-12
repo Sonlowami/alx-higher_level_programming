@@ -7,7 +7,7 @@ class MagicClass:
     """MagicClass - a class purely reconstructed from bytecode"""
 
     def __init__(self, radius):
-        """Initializing variables"""
+        self.__radius = 0
         if type(radius) is not int or type(radius) is not float:
             raise TypeError('radius must be a number')
         self.__radius = radius
