@@ -11,6 +11,7 @@ class Square:
         Args:
             size: the size of the square"""
         self.size = size
+        self.__position = position
         self.position = position
 
     def area(self):
