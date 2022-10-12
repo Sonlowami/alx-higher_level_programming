@@ -11,7 +11,7 @@ class Square:
         Args:
             size: the size of the square"""
         self.size = size
-        self.__position = position
+        self.position = position
 
     def area(self):
         """Compute the area of the square
@@ -64,9 +64,10 @@ class Square:
         i = 0
         while i < self.size:
             j, x = 0, 0
-            while x < self.position[0]:
-                print(" ", end="")
-                x += 1
+            if self.position[1] <= 0:
+                while x < self.position[0]:
+                    print(" ", end="")
+                    x += 1
 
             while j < self.size:
                 print("#", end="")
