@@ -4,7 +4,7 @@
 
 class Rectangle:
     """Contain instances and methods pertaining to rectangles"""
-    
+
     def __init__(self, width=0, height=0):
         """Initialize private instance variables for width and height"""
         self.width = width
