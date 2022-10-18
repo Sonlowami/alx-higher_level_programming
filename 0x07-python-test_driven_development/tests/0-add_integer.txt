@@ -1,0 +1,50 @@
+The test for the add function
+=============================
+We first import the add function and inf
+---------------------------------
+>>> add = __import__('0-add_integer').add
+>>> from math import inf
+>>>
+When a and b are strings
+------------------------
+>>> add("me", "you")
+Traceback (most recent call last):
+TypeError: a must be an integer
+>>>
+When only b is a string
+------------------------
+>>> add(5, "15")
+Traceback (most recent call last):
+TypeError: b must be an integer
+>>>
+When both are floats
+---------------------
+>>> add(2.4, 3.6)
+5
+>>>
+When b is the only float
+------------------------
+>>> add(3, 4.8)
+7
+>>>
+when b is negative
+-------------------
+>>> add(5, -2)
+3
+>>>
+when a is negative
+-------------------
+>>> add(-5, 2)
+-3
+>>>
+When a is none
+----------------
+>>> add(None)
+Traceback (most recent call last): 
+TypeError: a must be an integer
+>>>
+When a is infinite 
+>>> add(float(inf))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+
