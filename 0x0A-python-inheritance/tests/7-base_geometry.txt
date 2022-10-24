@@ -1,0 +1,65 @@
+Testing the Integer Validation Function
+=========================================
+Imprting the function and instantiating
+----------------------------------------
+>>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+>>> bg = BaseGeometry()
+>>>
+Passing nothing
+----------------
+>>> bg.integer_validator()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+>>> bg.integer_validator("a", 22)
+>>> bg.integer_validator("a", -12)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/son/alx/alx-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 17, in integer_validator
+    raise ValueError(f"{name} must be greater than 0")
+ValueError: a must be greater than 0
+
+Passing a negative number
+--------------------------
+>>> bg.integer_validator("a", -12)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/son/alx/alx-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 17, in integer_validator
+    raise ValueError(f"{name} must be greater than 0")
+ValueError: a must be greater than 0
+
+Passing in zero
+----------------
+>>> bg.integer_validator("a", 0)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/son/alx/alx-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 17, in integer_validator
+    raise ValueError(f"{name} must be greater than 0")
+ValueError: a must be greater than 0
+
+Passing in a string
+--------------------
+>>> bg.integer_validator("a", "John")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/son/alx/alx-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 15, in integer_validator
+    raise TypeError(f"{name} must be an integer")
+TypeError: a must be an integer
+
+Passing in a float
+-------------------
+>>> bg.integer_validator("a", 0.5)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/son/alx/alx-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 15, in integer_validator
+    raise TypeError(f"{name} must be an integer")
+TypeError: a must be an integer
+
+Passing in an integer
+---------------------
+>>> bg.integer_validator("a", (2))
+
+Passing in a big integer
+---------------------------
+>>> bg.integer_validator("a", 12345678999999098765456789876543456787654)
+>>>

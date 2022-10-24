@@ -1,0 +1,44 @@
+Python's MyList class
+=====================
+This class contain a method that prints objects of MyList class in their ascending order.
+>>> mylist = __import__("1-my_list").MyList
+>>> print(mylist)
+<class '1-my_list.MyList'>
+>>> MyList = mylist
+>>> lst = MyList()
+>>> lst.print_sorted()
+[]
+>>> print(lst)
+[]
+>>> lst.append(1)
+>>> lst.print_sorted()
+[1]
+>>> lst.append(2)
+>>> lst.print_sorted()
+[1, 2]
+>>> print(lst)
+[1, 2]
+>>> lst.insert(1, 4)
+>>> lst.print_sorted()
+[1, 2, 4]
+>>> print(lst)
+[1, 4, 2]
+>>> lst.append(9.56)
+>>> lst.print_sorted()
+[1, 2, 4, 9.56]
+>>> lst.append(-1)
+>>> lst.append(1)
+>>> lst.append(0.9)
+>>> lst.print_sorted()
+[-1, 0.9, 1, 1, 2, 4, 9.56]
+>>> print(lst)
+[1, 4, 2, 9.56, -1, 1, 0.9]
+>>> lst.append("So Cool")
+>>> lst.print_sorted()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/son/alx/alx-higher_level_programming/0x0A-python-inheritance/1-my_list.py", line 10, in print_sorted
+    print(sorted(self))
+TypeError: '<' not supported between instances of 'str' and 'int'
+>>>
+
