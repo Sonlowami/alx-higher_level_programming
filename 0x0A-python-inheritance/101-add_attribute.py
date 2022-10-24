@@ -4,7 +4,6 @@
 
 def add_attribute(obj, key, value):
     """Attempt to add an attribute to an object"""
-    try:
-        vars(obj)[key] = value
-    except Exception:
-        raise TypeError("can't add new attribute")
+    if not hasattr(obj, '__dict__'):
+        raise TypeError("can't add a new attribute")
+    vars(obj)[key] = value
