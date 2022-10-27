@@ -1,0 +1,30 @@
+Test a function that says a name
+=================================
+This function will get a first name and a last name and return the full name
+
+We first import the function
+----------------------------
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>>
+Pass it with only the first name
+--------------------------------
+>>> say_my_name("Docine")
+My name is Docine
+>>>
+Passing with the full name
+----------------------------
+>>> say_my_name("Ufitemungu Docine")
+My name is Ufitemungu Docine
+>>>
+Passing an integer
+------------------
+>>> say_my_name(7)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+>>>
+Passing a float on last name
+----------------------------
+>>> say_my_name("Ufitemungu", 5)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+>>>
