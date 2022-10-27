@@ -15,4 +15,4 @@ def print_square(size):
             print('#', end="")
             j += 1
         i += 1
-        print ("")
+        print("")
