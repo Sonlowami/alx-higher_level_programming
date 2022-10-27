@@ -2,7 +2,7 @@ The test for the add function
 =============================
 We first import the add function and inf
 ---------------------------------
->>> add = __import__('0-add_integer').add_integer
+>>> add = __import__('0-add_integer').add
 >>> from math import inf
 >>>
 When a and b are strings
@@ -47,4 +47,4 @@ When a is infinite
 >>> add(float(inf))
 Traceback (most recent call last):
 OverflowError: cannot convert float infinity to integer
-
+>>>
