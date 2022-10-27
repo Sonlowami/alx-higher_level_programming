@@ -2,7 +2,7 @@ The test for the add function
 =============================
 We first import the add function and inf
 ---------------------------------
->>> add = __import__('0-add_integer').add
+>>> add = __import__('0-add_integer').add_integer
 >>> from math import inf
 >>>
 When a and b are strings
