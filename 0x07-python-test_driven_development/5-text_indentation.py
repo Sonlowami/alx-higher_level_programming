@@ -12,6 +12,6 @@ def text_indentation(text):
             print('{}'.format(text[i]), end="")
         else:
             print("\n\n", end="")
-            if isspace(text[i + 1]):
+            if i < len(text) - 1 and text[i + 1].isspace():
                 i += 1
         i += 1

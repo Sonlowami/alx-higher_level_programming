@@ -1,0 +1,31 @@
+Testing a function that puts two new lines after every ., ! and ? in text
+==========================================================================
+We first import the function
+------------------------------
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+>>>
+Then, we first pass in nothing
+------------------------------
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+>>>
+We can also pass in a bad type such as an integer
+-------------------------------------------------
+>>> text_indentation(5)
+Traceback (most recent call last):
+TypeError: text must be a string
+>>>
+In addition, we can also pass in a string without any of the three signs
+-------------------------------------------------------------------------
+>>> text_indentation("Ufitemungu 220007970")
+Ufitemungu 220007970
+>>>
+We can pass in a very long test 
+-------------------------------
+>>> text_indentation("Hey there! What is your name? My name is Docine.")
+Hey there!
+What is your name?
+My name is Docine.
+
+>>>
