@@ -1,0 +1,39 @@
+Test a function that prints a square of a particular size
+
+We first import the function
+-----------------------------
+>>> print_square = __import__("4-print_square").print_square
+>>>
+A square of size 0
+-------------------
+>>> print_square(0)
+>>>
+Create a square of size 1
+--------------------------
+>>> print_square(1)
+#
+>>>
+Create a square of size 2
+--------------------------
+>>> print_square(2)
+##
+##
+>>>
+Pass a negative size number
+-----------------------------
+>>> print_square(-5)
+Traceback (most recent call last):
+ValueError: size must be >= 0
+>>>
+Pass a float
+-------------
+>>> print_square(4.2)
+Traceback (most recent call last):
+TypeError: size must be an integer
+>>>
+Pass a string
+--------------
+>>> print_square('5')
+Traceback (most recent call last):
+TypeError: size must be an integer
+>>>
