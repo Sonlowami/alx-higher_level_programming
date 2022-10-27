@@ -49,3 +49,21 @@ When a is infinite
 Traceback (most recent call last):
 OverflowError: cannot convert float infinity to integer
 >>>
+Missing two arguments
+----------------------
+>>> add_integer()
+Traceback (most recent call last):
+TypeError: add_integer() missing 1 required positional argument: 'a'
+>>>
+Missing one argument
+---------------------
+>>> add_integer(5)
+103
+>>>
+When passed in indeterminant form
+----------------------------------
+>>> add_integer(float('NaN'))
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer
+>>>
+
