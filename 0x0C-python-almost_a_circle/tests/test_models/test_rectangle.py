@@ -98,3 +98,54 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rect.area(), 90)
         rect.height = 10
         self.assertEqual(rect.area(), 20)
+
+    def test_update_id(self):
+        """Test the update id"""
+        self.rect.update(23);
+        self.assertEqual(self.rect.id, 23)
+
+    def test_update_width(self):
+        """Test the update width"""
+        self.rect.update(23, 21);
+        self.assertEqual(self.rect.width, 21)
+
+    def test_update_heigth(self):
+        """Test the update height"""
+        self.rect.update(23, 21, 44);
+        self.assertEqual(self.rect.height, 44)
+    
+    def test_update_x(self):
+        """Test the update x"""
+        self.rect.update(23, 21, 44, 32)
+        self.assertEqual(self.rect.x, 32)
+
+    def test_update_y(self):
+        """Test the update y"""
+        self.rect.update(23, 21, 44, 32, 9)
+        self.assertEqual(self.rect.y, 9)
+
+
+    def test_update_kw_id(self):
+        """Test the update id"""
+        self.rect.update(id=230);
+        self.assertEqual(self.rect.id, 230)
+
+    def test_update_kw_width(self):
+        """Test the update width"""
+        self.rect.update(width=210);
+        self.assertEqual(self.rect.width, 210)
+
+    def test_update_kw_heigth(self):
+        """Test the update height"""
+        self.rect.update(height=440);
+        self.assertEqual(self.rect.height, 440)
+    
+    def test_update_kw_x(self):
+        """Test the update x"""
+        self.rect.update(x=320)
+        self.assertEqual(self.rect.x, 320)
+
+    def test_update_kw_y(self):
+        """Test the update y"""
+        self.rect.update(y=90)
+        self.assertEqual(self.rect.y, 90)
