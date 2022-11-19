@@ -21,14 +21,5 @@ class TestBase(unittest.TestCase):
         self.assertEqual(self.c.id, 12)
         self.assertEqual(self.d.id, 3)
 
-    def test_to_json_string(self):
-        """Test to_json_string function"""
-        self.assertEqual([], '[]')
-        self.assertEqual([{1}], '[{1}]')
-        self.assertEqual([{'Name': "me"}], "[{name: me}]")
-        self.assertEqual([None], '[]')
-        self.assertEqual([{'lang': 'python'}, {'learner': 'Uwimana', 'school': 'ALX'}], '[{lang: python}, {learner: Uwimana, school = ALX}]')
-
-
 if __name__ == '__main__':
     unittest.main()
