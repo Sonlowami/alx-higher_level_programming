@@ -19,7 +19,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rect.x, 0)
         self.assertEqual(rect.y, 1)
 
-    def test_setters_with_numbers(self):
+    def test_setters_with_positive_numbers(self):
         """Test setter functions with positive and negative numbers"""
         rect = self.rect
         """With positive numbers"""
@@ -32,21 +32,46 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rect.height, 5)
         self.assertEqual(rect.x, 2)
         self.assertEqual(rect.y, 3)
-
+    
+    def test_setters_with_negative_numbers(self):
         """With negative numbers"""
 
-        self.assertRaises(TypeError, self.rect.width, -455)
-        self.assertRaises(TypeError, self.rect.height, -5)
-        self.assertRaises(TypeError, self.rect.x, -2)
-        self.assertRaises(TypeError, rect.y, -3)
+        with self.assertRaises(ValueError):
+            self.rect.width = -455
+        with self.assertRaises(ValueError):
+            self.rect.height = -5
+        with self.assertRaises(ValueError):
+            self.rect.x = -2
+        with self.assertRaises(ValueError):
+            self.rect.y = -3
 
-    def test_setters_by_strings_and_floats(self):
+    def test_setters_with_floats(self):
         """Test setter functions with strings"""
 
         self.assertRaises(TypeError, self.rect.width, 3.145)
         self.assertRaises(TypeError, self.rect.height, 4.21)
         self.assertRaises(TypeError, self.rect.x, 12)
         self.assertRaises(TypeError, self.rect.y, 0.5)
+
+    def test_setters_with_zero_a(self):
+        """Try to set width and height to 0"""
+
+        with self.assertRaises(ValueError):
+            self.rect.width = 0
+        with self.assertRaises(ValueError):
+            self.rect.height = 0
+
+    def test_setters_with_zero_b(self):
+        """Try to set x and y to 0"""
+
+        self.rect.x = 0
+        self.rect.y = 0
+        self.assertEqual(self.rect.x, 0)
+        self.assertEqual(self.rect.y, 0)
+
+    def test_id(self):
+        """Test id of the rectangle"""
+        self.assertEqual(self.rect.id, 3)
 
     def test_area(self):
         rect = self.rect

@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Contain a base class"""
 import json
+import csv
 
 
 class Base:
@@ -44,3 +45,11 @@ class Base:
         x = cls(1, 1, 1, 1, 1)
         x.update(**dictionary)
         return x
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Save list_obj to a csv file"""
+        with open(f"{cls.__name__}.csv", 'w', encoding='utf8') as f:
+            writer = csv.writer(f)
+            writer.writerow(list_objs)
+

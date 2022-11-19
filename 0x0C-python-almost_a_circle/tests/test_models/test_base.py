@@ -7,16 +7,19 @@ from models.base import Base
 class TestBase(unittest.TestCase):
     """Test different functionalities of the base class"""
 
+    def setUp(self):
+        """Initialize objects"""
+        self.a = Base()
+        self.b = Base()
+        self.c = Base(12)
+        self.d = Base()
+
     def test_id(self):
         """Test the value of id"""
-        base = Base()
-        base1 = Base(12)
-        base2 = Base("16")
-        base3 = Base()
-        self.assertEqual(base.id, 1)
-        self.assertEqual(base1.id, 12)
-        self.assertEqual(base2.id, "16")
-        self.assertEqual(base3.id, 2)
+        self.assertEqual(self.a.id, 1)
+        self.assertEqual(self.b.id, 2)
+        self.assertEqual(self.c.id, 12)
+        self.assertEqual(self.d.id, 3)
 
     def test_to_json_string(self):
         """Test to_json_string function"""

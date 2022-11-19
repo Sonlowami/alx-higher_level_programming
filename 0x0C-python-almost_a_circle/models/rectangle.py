@@ -65,9 +65,9 @@ class Rectangle(Base):
     def y(self, value):
         """set the value of y"""
         if type(value) is not int:
-            raise TypeError("x must be an integer")
+            raise TypeError("y must be an integer")
         if value < 0:
-            raise ValueError("x must be >= 0")
+            raise ValueError("y must be >= 0")
         self.__y = value
 
     def area(self):
@@ -98,7 +98,7 @@ class Rectangle(Base):
     def __str__(self):
         """"Return a string representation of a rectangle"""
         return f"[rectangle] ({self.id}) {self.x}/{self.y} -\
-                {self.width}/{self.height}"
+{self.width}/{self.height}"
 
     def update(self, *args, **kwargs):
         """Update the attributes of a rectangle"""
