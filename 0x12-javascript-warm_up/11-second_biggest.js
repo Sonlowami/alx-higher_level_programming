@@ -1,15 +1,22 @@
 #!/usr/bin/node
-const args = parseInt(process.argv.slice(2));
-if (!args[0] || !args[1]) {
-  console.log(0);
-}
-console.log(args);
-let max = args[0];
-let prevmax;
-for (let i = 1; args[i]; i++) {
-  if (args[i] > max) {
-    prevmax = max;
-    max = args[i];
+/* Print the second largest argument */
+
+const args = process.argv.slice(2);
+const intargs = [];
+if (!args.length || args.length === 1) { console.log(0); } else {
+  for (let i = 0; i < args.length; i++) {
+    const arg = parseInt(args[i]);
+    if (arg) { intargs.push(arg); }
   }
 }
-console.log(prevmax);
+let max, preMax;
+if (intargs.length > 1) {
+  max = intargs[0];
+  for (let i = 1; i < intargs.length; i++) {
+    if (intargs[i] > max) {
+      preMax = max;
+      max = intargs[i];
+    }
+  }
+  console.log(preMax);
+}
