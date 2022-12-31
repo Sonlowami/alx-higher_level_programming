@@ -3,13 +3,19 @@
 import MySQLdb
 from sys import argv
 
-try:
-    db = MySQLdb.connect(host='localhost', user=argv[1], passwd=argv[2], db=argv[3], port=3306)
-    cur = db.cursor()
-    cur.execute("SELECT id, name FROM states WHERE ASCII(name) = ASCII('N') ORDER BY id;")
-    for item in cur.fetchall():
-        print(item)
-    cur.close()
-    db.close()
-except MySQLdb.Error as e:
-    print(e)
+
+def main():
+    """Filter all states starting by N"""
+    try:
+        db = MySQLdb.connect(host='localhost', user=argv[1], passwd=argv[2], db=argv[3], port=3306)
+        cur = db.cursor()
+        cur.execute("SELECT id, name FROM states WHERE ASCII(name) = ASCII('N') ORDER BY id;")
+        for item in cur.fetchall():
+            print(item)
+        cur.close()
+        db.close()
+    except MySQLdb.Error as e:
+        print(e)
+
+if __name__=='__main__':
+    main()
