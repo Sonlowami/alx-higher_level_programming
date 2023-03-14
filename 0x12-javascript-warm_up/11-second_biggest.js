@@ -7,12 +7,12 @@ function secondBiggest (args) {
     console.log(0);
     return;
   }
-  let high = args[0];
-  let low = args[0];
+  let high = parseInt(args[0], 10);
+  let low = high;
   for (let i = 1; i < args.length; i++) {
-    if (args[i] > high) {
+    if (parseInt(args[i], 10) > high) {
       const tmp = high;
-      high = args[i];
+      high = parseInt(args[i]);
       low = tmp;
     }
   }
