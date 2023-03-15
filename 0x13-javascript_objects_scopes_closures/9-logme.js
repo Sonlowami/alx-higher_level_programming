@@ -1,4 +1,4 @@
-#!/usr/bin/env
+#!/usr/bin/node
 
 let count = 0;
 
