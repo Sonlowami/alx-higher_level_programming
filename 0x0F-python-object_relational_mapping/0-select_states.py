@@ -7,6 +7,7 @@ and the authentication information are passed on the
 commandline
 """
 
+
 def main():
     """
     This function does not execute when imported
@@ -25,5 +26,5 @@ def main():
     db.close()
 
 
-if __name__=='__main__':
+if __name__ == '__main__':
     main()
