@@ -13,4 +13,4 @@ creating, updating, deleting and reading data from databases using the SQLAlchem
 
 ## Who owns this project
 
-The solutions to these programming challenges by ALX solely belong to [Uwimana Lowami](https://github.com/Sonlowami)
+The solutions to these programming challenges by ALX solely belong to [Uwimana Lowami](https://github.com/Sonlowamic)
