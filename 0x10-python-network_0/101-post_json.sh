@@ -1,3 +1,3 @@
 #!/bin/bash
 # send a post request from a file
-curl -sfd "@$2" "$1"
+curl -sd "@$2" "$1"
