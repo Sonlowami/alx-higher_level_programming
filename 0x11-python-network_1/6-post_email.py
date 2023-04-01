@@ -6,9 +6,9 @@ def main():
     """fetch a resource or get error"""
 
     import requests
-    from sys import argv
-    data = {"email": argv[2]}
-    resp = requests.post(argv[1], data)
+    import sys
+    data = {"email": sys.argv[2]}
+    resp = requests.post(sys.argv[1], data)
     print(resp.text)
 
 
