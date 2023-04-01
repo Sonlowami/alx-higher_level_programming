@@ -9,7 +9,7 @@ def main():
     with request.urlopen("https://alx-intranet.hbtn.io/status") as resp:
         resp = resp.read()
         print("Body response:\n\t- type: {}\n\t- content: {}"
-             .format(type(resp), resp))
+              .format(type(resp), resp))
         print("\t- utf8 content: {}".format(resp.decode('utf-8')))
 
 
