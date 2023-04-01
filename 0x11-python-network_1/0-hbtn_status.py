@@ -1,13 +1,16 @@
 #!/usr/bin/python3
-"""fetch the intranet"""
+"""This module contains a function that fetches from the intranet"""
+
 
 def main():
     """fetch the intranet"""
 
-    import urllib.request
-    resp = urllib.request.urlopen("https://alx-intranet.hbtn.io/status").read()
-    print("Body response:\n\t- type: {}\n\t- content: {}\n\t- utf8 content: {}"
-          .format(type(resp), resp, resp.decode("utf-8")))
+    from urllib import request
+    with request.urlopen("https://alx-intranet.hbtn.io/status") as resp:
+        resp = resp.read()
+        print("Body response:\n\t- type: {}\n\t- content: {}"
+             .format(type(resp), resp))
+        print("\t- utf8 content: {}".format(resp.decode('utf-8')))
 
 
 if __name__ == '__main__':
