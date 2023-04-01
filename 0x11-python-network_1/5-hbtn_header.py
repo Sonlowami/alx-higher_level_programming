@@ -9,7 +9,7 @@ def main():
     data = requests.get(argv[1])
     try:
         print(data.headers['X-Request-Id'])
-    except:
+    except KeyError:
         pass
 
 
