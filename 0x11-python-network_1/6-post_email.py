@@ -5,7 +5,7 @@
 def main():
     """fetch a resource or get error"""
 
-    import request
+    import requests
     from sys import argv
     data = {"email": argv[2]}
     resp = requests.post(argv[1], data)
