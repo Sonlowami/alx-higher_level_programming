@@ -11,4 +11,8 @@ def main():
     if resp.ok:
         print(resp.text)
     else:
-        print("Error code: {}", resp.status)
+        print("Error code: {}".format(resp.status_code))
+
+
+if __name__ == '__main__':
+    main()
