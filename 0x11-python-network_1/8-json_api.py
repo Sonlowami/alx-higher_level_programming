@@ -13,10 +13,11 @@ def main():
         data['q'] = ''
     resp = requests.post('http://0.0.0.0:5000/search_user', data)
     try:
-        if len(resp.json()) == 0:
+        r = resp.json()
+        if len(r) == 0:
             print("no result")
             return
-        print(resp.json())
+        print(r)
     except ValueError:
         print("Not a valid JSON")
 
