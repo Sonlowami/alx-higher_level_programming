@@ -7,7 +7,7 @@ def main():
     import requests
     import sys
     data = {}
-    if len(sys.argv) > 0:
+    if len(sys.argv) > 1:
         data['q'] = sys.argv[1]
     else:
         data['q'] = ''
