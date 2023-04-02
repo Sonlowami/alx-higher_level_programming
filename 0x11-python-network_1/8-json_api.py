@@ -17,7 +17,7 @@ def main():
         if len(r) == 0:
             print("no result")
             return
-        print(r)
+        print("[{}] {}".format(r.get("id"), r.get("name")))
     except ValueError:
         print("Not a valid JSON")
 
