@@ -1,0 +1,12 @@
+#!/usr/bin/node
+/**
+ * This script reads content from a webpage and stores it in a file
+ * It expects URL, and destination file path as commandline arguments
+ * in that order
+ */
+const request = require('request');
+const fs = require('fs');
+const url = process.argv[2];
+const file = process.argv[3];
+
+request(url).pipe(fs.createWriteStream(file));
