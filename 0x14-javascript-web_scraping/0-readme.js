@@ -3,13 +3,13 @@
  * This script gets an a filepath and attempts to read from it,
  * printing to stdout
  */
-const fs = require('fs/promises');
+const fs = require('fs');
 const args = process.argv.slice(2);
 
-async function read () {
-  try {
-    const data = await fs.readFile(args[0], { encoding: 'utf-8' });
-    await console.log(data);
-  } catch (error) { console.log(error); }
+function read () {
+  const data = fs.readFile(args[0],'utf-8', (err, content) => {
+    if (err) { console.log(err); }
+    else { console.log(content); }
+  });
 }
 read();
