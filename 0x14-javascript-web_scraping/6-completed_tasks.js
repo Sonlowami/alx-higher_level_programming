@@ -6,7 +6,7 @@
  */
 const request = require('request');
 const options = {
-  url: 'https://jsonplaceholder.typicode.com/todos',
+  url: process.argv[2],
   headers: { Accept: 'application/json' }
 };
 request(options, (err, resp, body) => {
