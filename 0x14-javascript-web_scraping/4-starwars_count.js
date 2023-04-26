@@ -7,7 +7,7 @@ const request = require('request');
 
 const options = {
   // the url
-  url: 'https://swapi-api.alx-tools.com/api/films/',
+  url: process.argv[2],
   // the headers
   headers: { Accept: 'application/json' }
 };
