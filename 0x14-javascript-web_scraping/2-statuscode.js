@@ -8,6 +8,6 @@ const request = require('request');
 const args = process.argv.slice(2);
 
 request(args[0], (err, resp, body) => {
-  console.log('code: ', resp && resp.statusCode);
+  console.log('code:', resp && resp.statusCode);
   if (err) { console.log(err); }
 });
