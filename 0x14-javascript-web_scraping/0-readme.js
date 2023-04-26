@@ -7,9 +7,8 @@ const fs = require('fs');
 const args = process.argv.slice(2);
 
 function read () {
-  const data = fs.readFile(args[0],'utf-8', (err, content) => {
-    if (err) { console.log(err); }
-    else { console.log(content); }
+  fs.readFile(args[0], 'utf-8', (err, content) => {
+    if (err) { console.log(err); } else { console.log(content); }
   });
 }
 read();
