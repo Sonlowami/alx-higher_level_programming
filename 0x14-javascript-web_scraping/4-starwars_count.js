@@ -12,13 +12,11 @@ const options = {
   headers: { Accept: 'application/json' }
 };
 request(options, (err, resp, body) => {
-  if (err) { console.log(err); }
-  else { 
+  if (err) { console.log(err); } else {
     const res = JSON.parse(body).results;
     let count = 0;
     res.forEach(item => {
-      if (item.characters.find(character => character.endsWith('/18/')))
-	    { count++; }
+      if (item.characters.find(character => character.endsWith('/18/'))) { count++; }
     });
     console.log(count);
   }
