@@ -4,7 +4,6 @@
  * appears
  */
 const request = require('request');
-const id = 18;
 
 const options = {
   // the url
@@ -13,11 +12,14 @@ const options = {
   headers: { Accept: 'application/json' }
 };
 request(options, (err, resp, body) => {
-  const res = JSON.parse(body).results;
-  let count = 0;
-  res.forEach(item => {
-    if (id in item.characters) { count++; }
-  });
-  console.log(count);
   if (err) { console.log(err); }
+  else { 
+    const res = JSON.parse(body).results;
+    let count = 0;
+    res.forEach(item => {
+      if (item.characters.find(character => character.endsWith('/18/')))
+	    { count++; }
+    });
+    console.log(count);
+  }
 });
