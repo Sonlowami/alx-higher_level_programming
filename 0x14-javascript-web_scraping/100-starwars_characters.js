@@ -4,17 +4,16 @@
  * appears
  */
 const request = require('request');
-
+const id = process.argv[2];
 const options = {
   // the url
-  url: 'https://swapi-api.alx-tools.com/api/films/',
+  url: `https://swapi-api.alx-tools.com/api/films/${id}`,
   // the headers
   headers: { Accept: 'application/json' }
 };
 request(options, (err, resp, body) => {
-  const id = process.argv[2];
-  const res = JSON.parse(body).results;
-  const characters = res[Number(`${id}`)].characters;
+  const res = JSON.parse(body);
+  const characters = res.characters;
 
   characters.forEach(url => {
     request(url, (err, resp, body) => {
